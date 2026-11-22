@@ -295,7 +295,9 @@ tfoot td { font-weight: 700; background: var(--paper-2); }
 .nl h4 { color: var(--brick); margin-bottom: 6px; }
 .wide .ph img { object-fit: contain; background: var(--paper-2); }
 @media (max-width: 720px) {
-  .letters.single .letter { grid-template-columns: 96px minmax(0, 1fr); }
+  .letters.single .letter { display: block; }
+  .letters.single .portrait { float: left; width: 104px; margin: 4px 16px 8px 0; }
+  .letters.single .letter::after { content: ""; display: block; clear: both; }
   .lead-split.wide-img, .money-split { grid-template-columns: minmax(0, 1fr); }
 }
 </style>
